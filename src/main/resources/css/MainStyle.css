@@ -1,0 +1,13 @@
+/* style.css */
+.root {
+    -fx-background-color: #eeeeee; /* Szare tło */
+}
+
+.button {
+    -fx-border-radius: 5px;
+}
+
+.button-normal {
+    -fx-background-color: #8EABF5;
+    -fx-border-color: #8EABF5;
+}

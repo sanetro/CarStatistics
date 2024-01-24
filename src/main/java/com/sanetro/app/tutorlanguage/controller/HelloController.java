@@ -1,4 +1,4 @@
-package com.sanetro.app.tutorlanguage;
+package com.sanetro.app.tutorlanguage.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

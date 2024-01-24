@@ -9,36 +9,24 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.sanetro.app.tutorlanguage.controller.MainPanelOpenerController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="900.0" prefWidth="600.0"
+            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
 
-    <!-- Górny pasek (Nagłówek) -->
+    <VBox>
+        <Button text="Back" onAction="#handleReturnBackButtonAction" maxWidth="Infinity"/>
+        <Label text="Welcome in Home!"/>
+        <Label text="Here you will find important information about HOME." wrapText="true"/>
+        <TableView fx:id="carTableView">
+            <columns>
+                <TableColumn fx:id="makeColumn" text="Make" />
+                <TableColumn fx:id="modelColumn" text="Model" />
+                <TableColumn fx:id="yearColumn" text="Year" />
+                <TableColumn fx:id="colorColumn" text="Color" />
+                <TableColumn fx:id="engineSizeColumn" text="Engine Size" />
+                <TableColumn fx:id="vinColumn" text="VIN" />
+            </columns>
+        </TableView>
 
-        <VBox>
-            <Label text="Główny Panel"/>
-
-
-
-    <!-- Menu nawigacyjne po lewej stronie -->
-
-
-            <Button text="Home" onAction="#handleHomeButtonAction" maxWidth="Infinity"/>
-            <Button text="Settings" maxWidth="Infinity"/>
-            <Button text="Profile" maxWidth="Infinity"/>
-            <Button text="Logout" maxWidth="Infinity"/>
-
-
-
-    <!-- Główna zawartość -->
-
-
-            <Label text="Witaj w Głównym Panelu!"/>
-            <Label text="Tutaj znajdziesz ważne informacje i funkcje aplikacji." wrapText="true"/>
-        </VBox>
-
-
+    </VBox>
 </AnchorPane>
-
-
-
-
-

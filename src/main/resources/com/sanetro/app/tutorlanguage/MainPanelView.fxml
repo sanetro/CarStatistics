@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import java.util.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -9,36 +9,24 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.sanetro.app.tutorlanguage.controller.MainPanelOpenerController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0"
+            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
 
-    <!-- Górny pasek (Nagłówek) -->
+    <VBox alignment="CENTER"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
 
-        <VBox>
-            <Label text="Główny Panel"/>
+        <Label text="Main Panel"/>
 
+        <GridPane alignment="CENTER" hgap="5" vgap="5">
+            <Button text="Home" onAction="#handleHomeButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Button text="Settings" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Button text="Profile" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            <Button text="Logout" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+        </GridPane>
 
-
-    <!-- Menu nawigacyjne po lewej stronie -->
-
-
-            <Button text="Home" onAction="#handleHomeButtonAction" maxWidth="Infinity"/>
-            <Button text="Settings" maxWidth="Infinity"/>
-            <Button text="Profile" maxWidth="Infinity"/>
-            <Button text="Logout" maxWidth="Infinity"/>
-
-
-
-    <!-- Główna zawartość -->
-
-
-            <Label text="Witaj w Głównym Panelu!"/>
-            <Label text="Tutaj znajdziesz ważne informacje i funkcje aplikacji." wrapText="true"/>
-        </VBox>
-
-
+        <Label text="Welcome in main Panel!" />
+        <Label text="Something to type here..." wrapText="true"/>
+    </VBox>
 </AnchorPane>
-
-
-
-
-

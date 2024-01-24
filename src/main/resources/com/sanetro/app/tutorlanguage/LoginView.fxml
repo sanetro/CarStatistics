@@ -11,4 +11,13 @@
             fx:controller="com.sanetro.app.tutorlanguage.controller.LoginViewController"
             prefHeight="400.0" prefWidth="600.0">
 
+    <VBox alignment="CENTER" spacing="5.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+        <Label text="Log in"/>
+        <TextField fx:id="usernameField" promptText="Username" text="user1" maxWidth="200" prefWidth="150"/>
+        <PasswordField fx:id="passwordField" promptText="Password" text="password123" maxWidth="200" prefWidth="150"/>
+        <Button text="Log In" onAction="#handleLogin"/>
+    </VBox>
+
 </AnchorPane>

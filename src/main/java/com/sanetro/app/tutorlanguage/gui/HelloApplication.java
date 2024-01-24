@@ -1,4 +1,4 @@
-package com.sanetro.app.tutorlanguage;
+package com.sanetro.app.tutorlanguage.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
