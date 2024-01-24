@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.sanetro.app.tutorlanguage.controller.MainPanelOpenerController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Górny pasek (Nagłówek) -->
+
+        <VBox>
+            <Label text="Główny Panel"/>
+
+
+
+    <!-- Menu nawigacyjne po lewej stronie -->
+
+
+            <Button text="Home" onAction="#handleHomeButtonAction" maxWidth="Infinity"/>
+            <Button text="Settings" maxWidth="Infinity"/>
+            <Button text="Profile" maxWidth="Infinity"/>
+            <Button text="Logout" maxWidth="Infinity"/>
+
+
+
+    <!-- Główna zawartość -->
+
+
+            <Label text="Witaj w Głównym Panelu!"/>
+            <Label text="Tutaj znajdziesz ważne informacje i funkcje aplikacji." wrapText="true"/>
+        </VBox>
+
+
+</AnchorPane>
+
+
+
+
+
