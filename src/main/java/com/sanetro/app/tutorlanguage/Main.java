@@ -12,7 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/sanetro/app/tutorlanguage/LoginView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/sanetro/app/tutorlanguage/views/LoginView.fxml"));
         primaryStage.setTitle("Login");
         primaryStage.setResizable(false);
         Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();

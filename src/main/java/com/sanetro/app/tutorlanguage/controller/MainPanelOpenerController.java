@@ -1,5 +1,6 @@
 package com.sanetro.app.tutorlanguage.controller;
 
+import com.sanetro.app.tutorlanguage.core.AbstractHandleButtonBackAndChangeView;
 import com.sanetro.app.tutorlanguage.db.Cars;
 import com.sanetro.app.tutorlanguage.model.Car;
 import javafx.collections.FXCollections;
@@ -8,23 +9,25 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 
-public class MainPanelOpenerController {
-    private static String lastEndpoint = "/com/sanetro/app/tutorlanguage/MainPanelView.fxml";
-
+public class MainPanelOpenerController extends AbstractHandleButtonBackAndChangeView {
+    @FXML
+    private TableColumn<Car, Void> deleteColumn = new TableColumn<Car, Void>();
     private Cars cars = new Cars();
     @FXML
     private TableView<Car> carTableView = new TableView<Car>();
+    @FXML
+    private TableColumn<Car, Integer> idColumn = new TableColumn<Car, Integer>();
     @FXML
     private TableColumn<Car, String> makeColumn = new TableColumn<Car, String>();
     @FXML
@@ -41,6 +44,7 @@ public class MainPanelOpenerController {
     @FXML
     public void initialize() {
         ObservableList<Car> carItems = FXCollections.observableArrayList(cars.getCars());
+        idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         makeColumn.setCellValueFactory(new PropertyValueFactory<>("make"));
         modelColumn.setCellValueFactory(new PropertyValueFactory<>("model"));
         yearColumn.setCellValueFactory(new PropertyValueFactory<>("year"));
@@ -48,11 +52,32 @@ public class MainPanelOpenerController {
         engineSizeColumn.setCellValueFactory(new PropertyValueFactory<>("engineSize"));
         vinColumn.setCellValueFactory(new PropertyValueFactory<>("vin"));
         carTableView.setItems(carItems);
+
+        deleteColumn.setCellFactory(param -> new TableCell<Car, Void>() {
+            private final Button deleteButton = new Button("X");
+
+            {
+                deleteButton.setOnAction(event -> {
+                    Car car = getTableView().getItems().get(getIndex());
+                    // TODO remove the car from data source and update the TableView
+                });
+            }
+
+            @Override
+            protected void updateItem(Void item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty) {
+                    setGraphic(null);
+                } else {
+                    setGraphic(deleteButton);
+                }
+            }
+        });
     }
 
     public static void openMainPanel(Stage currentStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(MainPanelOpenerController.class.getResource("/com/sanetro/app/tutorlanguage/MainPanelView.fxml"));
+            FXMLLoader loader = new FXMLLoader(MainPanelOpenerController.class.getResource("/com/sanetro/app/tutorlanguage/views/MainPanelView.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setTitle("Main Panel");
@@ -70,25 +95,17 @@ public class MainPanelOpenerController {
 
     @FXML
     private void handleHomeButtonAction(ActionEvent event) {
-        changeView(event, "/com/sanetro/app/tutorlanguage/HomeView.fxml");
+        changeView(event, "/com/sanetro/app/tutorlanguage/views/CarListView.fxml");
     }
 
     @FXML
-    private void handleReturnBackButtonAction(ActionEvent event) {
-        changeView(event, "/com/sanetro/app/tutorlanguage/MainPanelView.fxml");
+    private void handleCarStatisticsButtonAction(ActionEvent event) {
+        changeView(event, "/com/sanetro/app/tutorlanguage/views/CarStatisticsView.fxml");
     }
 
-    private void changeView(ActionEvent event, String fxmlPath) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
-            Parent newView = loader.load();
-            Scene scene = ((Node)event.getSource()).getScene();
-            scene.setRoot(newView);
-            lastEndpoint = fxmlPath;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    @Override
+    protected void handleReturnBackButtonAction(ActionEvent event) {
+        changeView(event, "/com/sanetro/app/tutorlanguage/views/MainPanelView.fxml");
     }
-
 }
 

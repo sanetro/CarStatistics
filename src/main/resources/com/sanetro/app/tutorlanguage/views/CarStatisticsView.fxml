@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.sanetro.app.tutorlanguage.controller.MainPanelOpenerController"
+            prefHeight="900.0" prefWidth="600.0"
+            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+
+    <VBox AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <HBox alignment="TOP_LEFT">
+            <Button text="Back" onAction="#handleReturnBackButtonAction" prefWidth="100"/>
+        </HBox>
+        <VBox alignment="CENTER">
+            <BarChart fx:id="carChart">
+                <xAxis>
+                    <CategoryAxis label="Car Make"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Count"/>
+                </yAxis>
+            </BarChart>
+        </VBox>
+    </VBox>
+
+
+</AnchorPane>

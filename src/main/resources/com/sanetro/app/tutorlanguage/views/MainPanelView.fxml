@@ -20,9 +20,9 @@
         <Label text="Main Panel"/>
 
         <GridPane alignment="CENTER" hgap="5" vgap="5">
-            <Button text="Home" onAction="#handleHomeButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-            <Button text="Settings" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-            <Button text="Profile" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            <Button text="List of cars" onAction="#handleHomeButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Button text="Add car" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Button text="Car statistics" onAction="#handleCarStatisticsButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
             <Button text="Logout" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
         </GridPane>
 

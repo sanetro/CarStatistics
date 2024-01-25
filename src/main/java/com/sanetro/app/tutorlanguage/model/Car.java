@@ -1,6 +1,7 @@
 package com.sanetro.app.tutorlanguage.model;
 
 public class Car {
+    private Integer id;
     private String make;
     private String model;
     private int year;
@@ -11,7 +12,8 @@ public class Car {
     public Car() {
     }
 
-    public Car(String make, String model, int year, String color, double engineSize, String vin) {
+    public Car(Integer id, String make, String model, int year, String color, double engineSize, String vin) {
+        this.id = id;
         this.make = make;
         this.model = model;
         this.year = year;
@@ -21,6 +23,10 @@ public class Car {
     }
 
     // Getters
+    public Integer getId() {
+        return id;
+    }
+
     public String getMake() {
         return make;
     }
@@ -69,5 +75,7 @@ public class Car {
     public void setVin(String vin) {
         this.vin = vin;
     }
+
+
 }
 
