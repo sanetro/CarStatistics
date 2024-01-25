@@ -8,6 +8,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -55,11 +56,17 @@ public class MainPanelOpenerController extends AbstractHandleButtonBackAndChange
 
         deleteColumn.setCellFactory(param -> new TableCell<Car, Void>() {
             private final Button deleteButton = new Button("X");
-
             {
+                int value = 30;
+                deleteButton.setStyle("-fx-background-radius: 0;" +
+                        " -fx-min-width: " + value + "px;" +
+                        " -fx-min-height: " + value + "px;" +
+                        " -fx-max-width: " + value + "px;" +
+                        " -fx-max-height: " + value + "px;");
                 deleteButton.setOnAction(event -> {
                     Car car = getTableView().getItems().get(getIndex());
-                    // TODO remove the car from data source and update the TableView
+                    cars.deleteCar(car);
+                    getTableView().getItems().remove(car);
                 });
             }
 
@@ -70,6 +77,7 @@ public class MainPanelOpenerController extends AbstractHandleButtonBackAndChange
                     setGraphic(null);
                 } else {
                     setGraphic(deleteButton);
+                    setAlignment(Pos.CENTER);
                 }
             }
         });

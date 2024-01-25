@@ -23,10 +23,12 @@
             <Button text="List of cars" onAction="#handleHomeButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
             <Button text="Add car" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
             <Button text="Car statistics" onAction="#handleCarStatisticsButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
-            <Button text="Logout" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+            <Button text="Logout" onAction="#handleCarStatisticsButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
         </GridPane>
 
         <Label text="Welcome in main Panel!" />
         <Label text="Something to type here..." wrapText="true"/>
+
     </VBox>
+
 </AnchorPane>

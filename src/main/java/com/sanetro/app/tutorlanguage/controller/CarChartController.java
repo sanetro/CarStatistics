@@ -2,7 +2,6 @@ package com.sanetro.app.tutorlanguage.controller;
 
 import com.sanetro.app.tutorlanguage.db.Cars;
 import com.sanetro.app.tutorlanguage.model.Car;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
@@ -10,8 +9,6 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -19,7 +16,7 @@ import java.util.stream.Collectors;
 public class CarChartController {
 
     @FXML
-    //private BarChart<String, Number> carChart = new BarChart<>();
+    //private BarChart<String, Number> carChart = new BarChart<String, Number>();
 
     private List<Car> carList = new Cars().getCars();
 

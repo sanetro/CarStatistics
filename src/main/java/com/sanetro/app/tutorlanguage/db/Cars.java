@@ -12,7 +12,7 @@ public class Cars {
         carList.add(new Car(1, "Toyota", "Corolla", 2020, "Red", 1.8, "VIN123456789"));
         carList.add(new Car(2, "Honda", "Civic", 2019, "Blue", 2.0, "VIN987654321"));
         carList.add(new Car(3, "Tesla", "Model 3", 2021, "Black", 0.0, "VIN123987456"));
-        carList.add(new Car(4, "Ford", "Mustang", 2018, "White", 2.3, "VIN112233445"));
+        carList.add(new Car(4, "Ford", "Mustang", 2018, "White", 5.0, "VIN112233445"));
         carList.add(new Car(5, "Audi", "A4", 2022, "Gray", 2.0, "VIN998877665"));
     }
 
