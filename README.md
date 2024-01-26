@@ -18,9 +18,9 @@ To run the application, import the project into IntelliJ IDEA Community Edition 
 ## Screenshots
 Below are some screenshots depicting different aspects of the application:
 
-![Add Car](src/main/resources/images/forGitScreenshots/addCar.png)
-![Car List](src/main/resources/images/forGitScreenshots/carList.png)
-![Car Statistics](src/main/resources/images/forGitScreenshots/carStatistics.png)
-![Login](src/main/resources/images/forGitScreenshots/login.png)
-![Main Panel](src/main/resources/images/forGitScreenshots/mainPanel.png)
-![JavaFX Environment](src/main/resources/images/forGitScreenshots/javaFxEnv.png)
+![Add Car](https://raw.githubusercontent.com/sanetro/TutorLanguage/master/src/main/resources/images/forGitScreenshots/addCar.png)
+![Car List](https://raw.githubusercontent.com/sanetro/TutorLanguage/master/src/main/resources/images/forGitScreenshots/carList.png)
+![Car Statistics](https://raw.githubusercontent.com/sanetro/TutorLanguage/master/src/main/resources/images/forGitScreenshots/carStatistics.png)
+![Login](https://raw.githubusercontent.com/sanetro/TutorLanguage/master/src/main/resources/images/forGitScreenshots/login.png)
+![Main Panel](https://raw.githubusercontent.com/sanetro/TutorLanguage/master/src/main/resources/images/forGitScreenshots/mainPanel.png)
+![JavaFX Environment](https://raw.githubusercontent.com/sanetro/TutorLanguage/master/src/main/resources/images/forGitScreenshots/javaFxEnv.png)
