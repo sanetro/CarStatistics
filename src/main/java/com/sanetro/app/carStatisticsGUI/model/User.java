@@ -1,4 +1,4 @@
-package com.sanetro.app.tutorlanguage.model;
+package com.sanetro.app.carStatisticsGUI.model;
 
 public class User {
     private String username;

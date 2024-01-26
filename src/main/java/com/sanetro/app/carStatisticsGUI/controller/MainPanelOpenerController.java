@@ -1,8 +1,8 @@
-package com.sanetro.app.tutorlanguage.controller;
+package com.sanetro.app.carStatisticsGUI.controller;
 
-import com.sanetro.app.tutorlanguage.core.AbstractHandleButtonBackAndChangeView;
-import com.sanetro.app.tutorlanguage.db.Cars;
-import com.sanetro.app.tutorlanguage.model.Car;
+import com.sanetro.app.carStatisticsGUI.template.AbstractHandleButtonBackAndChangeView;
+import com.sanetro.app.carStatisticsGUI.db.Cars;
+import com.sanetro.app.carStatisticsGUI.model.Car;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,7 +20,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
-
 public class MainPanelOpenerController extends AbstractHandleButtonBackAndChangeView {
     @FXML
     private TableColumn<Car, Void> deleteColumn = new TableColumn<Car, Void>();
@@ -30,7 +29,7 @@ public class MainPanelOpenerController extends AbstractHandleButtonBackAndChange
     @FXML
     private TableColumn<Car, Integer> idColumn = new TableColumn<Car, Integer>();
     @FXML
-    private TableColumn<Car, String> makeColumn = new TableColumn<Car, String>();
+    private TableColumn<Car, String> brandColumn = new TableColumn<Car, String>();
     @FXML
     private TableColumn<Car, String> modelColumn = new TableColumn<Car, String>();
     @FXML
@@ -44,9 +43,10 @@ public class MainPanelOpenerController extends AbstractHandleButtonBackAndChange
 
     @FXML
     public void initialize() {
+        carTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         ObservableList<Car> carItems = FXCollections.observableArrayList(cars.getCars());
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
-        makeColumn.setCellValueFactory(new PropertyValueFactory<>("make"));
+        brandColumn.setCellValueFactory(new PropertyValueFactory<>("brand"));
         modelColumn.setCellValueFactory(new PropertyValueFactory<>("model"));
         yearColumn.setCellValueFactory(new PropertyValueFactory<>("year"));
         colorColumn.setCellValueFactory(new PropertyValueFactory<>("color"));
@@ -85,14 +85,14 @@ public class MainPanelOpenerController extends AbstractHandleButtonBackAndChange
 
     public static void openMainPanel(Stage currentStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(MainPanelOpenerController.class.getResource("/com/sanetro/app/tutorlanguage/views/MainPanelView.fxml"));
+            FXMLLoader loader = new FXMLLoader(MainPanelOpenerController.class.getResource("/com/sanetro/app/carStatisticsGUI/views/MainPanelView.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setTitle("Main Panel");
             Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
-            stage.setScene(new Scene(root, 900, 600));
-            stage.setX((screenBounds.getWidth() - 900) / 2);
-            stage.setY((screenBounds.getHeight() - 600) / 2);
+            stage.setScene(new Scene(root, 1200, 900));
+            stage.setX((screenBounds.getWidth() - 1200) / 2);
+            stage.setY((screenBounds.getHeight() - 900) / 2);
             stage.setResizable(false);
             stage.show();
             currentStage.close();
@@ -103,17 +103,27 @@ public class MainPanelOpenerController extends AbstractHandleButtonBackAndChange
 
     @FXML
     private void handleHomeButtonAction(ActionEvent event) {
-        changeView(event, "/com/sanetro/app/tutorlanguage/views/CarListView.fxml");
+        changeView(event, "/com/sanetro/app/carStatisticsGUI/views/CarListView.fxml");
     }
 
     @FXML
     private void handleCarStatisticsButtonAction(ActionEvent event) {
-        changeView(event, "/com/sanetro/app/tutorlanguage/views/CarStatisticsView.fxml");
+        changeView(event, "/com/sanetro/app/carStatisticsGUI/views/CarStatisticsView.fxml");
+    }
+
+    @FXML
+    private void handleCarAddButtonAction(ActionEvent event) {
+        changeView(event, "/com/sanetro/app/carStatisticsGUI/views/CarAddView.fxml");
+    }
+
+    @FXML
+    private void handleLogoutButtonAction(ActionEvent event) {
+        changeView(event, "/com/sanetro/app/carStatisticsGUI/views/LoginView.fxml");
     }
 
     @Override
     protected void handleReturnBackButtonAction(ActionEvent event) {
-        changeView(event, "/com/sanetro/app/tutorlanguage/views/MainPanelView.fxml");
+        changeView(event, "/com/sanetro/app/carStatisticsGUI/views/MainPanelView.fxml");
     }
 }
 

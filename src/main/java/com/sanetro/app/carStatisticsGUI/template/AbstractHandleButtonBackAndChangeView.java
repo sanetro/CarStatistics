@@ -1,4 +1,4 @@
-package com.sanetro.app.tutorlanguage.core;
+package com.sanetro.app.carStatisticsGUI.template;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,9 +10,10 @@ import javafx.scene.Scene;
 import java.io.IOException;
 
 public abstract  class AbstractHandleButtonBackAndChangeView {
-
     @FXML
-    protected abstract void handleReturnBackButtonAction(ActionEvent event);
+    protected void handleReturnBackButtonAction(ActionEvent event) {
+        changeView(event, "/com/sanetro/app/carStatisticsGUI/views/MainPanelView.fxml");
+    }
 
     @FXML
     protected void changeView(ActionEvent event, String fxmlPath) {

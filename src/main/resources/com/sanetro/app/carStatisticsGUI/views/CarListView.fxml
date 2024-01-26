@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.sanetro.app.tutorlanguage.controller.MainPanelOpenerController"
+            fx:controller="com.sanetro.app.carStatisticsGUI.controller.MainPanelOpenerController"
             prefHeight="900.0" prefWidth="600.0"
             AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
             AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
@@ -19,12 +16,11 @@
             <Button text="Back" onAction="#handleReturnBackButtonAction" prefWidth="100"/>
         </HBox>
         <VBox alignment="CENTER">
-            <Label text="Welcome in Home!"/>
-            <Label text="Here you will find important information about HOME." wrapText="true"/>
-            <TableView fx:id="carTableView">
+            <Label text="List of cars in database"/>
+            <TableView fx:id="carTableView" prefHeight="1000">
                 <columns>
                     <TableColumn fx:id="idColumn" text="Id" />
-                    <TableColumn fx:id="makeColumn" text="Make" />
+                    <TableColumn fx:id="brandColumn" text="Brand" />
                     <TableColumn fx:id="modelColumn" text="Model" />
                     <TableColumn fx:id="yearColumn" text="Year" />
                     <TableColumn fx:id="colorColumn" text="Color" />
@@ -35,6 +31,4 @@
             </TableView>
         </VBox>
     </VBox>
-
-
 </AnchorPane>

@@ -1,20 +1,20 @@
-package com.sanetro.app.tutorlanguage.model;
+package com.sanetro.app.carStatisticsGUI.model;
 
 public class Car {
     private Integer id;
-    private String make;
+    private String brand;
     private String model;
-    private int year;
+    private Integer year;
     private String color;
-    private double engineSize;
+    private Double engineSize;
     private String vin;
 
     public Car() {
     }
 
-    public Car(Integer id, String make, String model, int year, String color, double engineSize, String vin) {
+    public Car(Integer id, String brand, String model, Integer year, String color, Double engineSize, String vin) {
         this.id = id;
-        this.make = make;
+        this.brand = brand;
         this.model = model;
         this.year = year;
         this.color = color;
@@ -27,15 +27,15 @@ public class Car {
         return id;
     }
 
-    public String getMake() {
-        return make;
+    public String getBrand() {
+        return brand;
     }
 
     public String getModel() {
         return model;
     }
 
-    public int getYear() {
+    public Integer getYear() {
         return year;
     }
 
@@ -43,7 +43,7 @@ public class Car {
         return color;
     }
 
-    public double getEngineSize() {
+    public Double getEngineSize() {
         return engineSize;
     }
 
@@ -52,15 +52,15 @@ public class Car {
     }
 
     // Setters
-    public void setMake(String make) {
-        this.make = make;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public void setModel(String model) {
         this.model = model;
     }
 
-    public void setYear(int year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 
@@ -68,14 +68,12 @@ public class Car {
         this.color = color;
     }
 
-    public void setEngineSize(double engineSize) {
+    public void setEngineSize(Double engineSize) {
         this.engineSize = engineSize;
     }
 
     public void setVin(String vin) {
         this.vin = vin;
     }
-
-
 }
 

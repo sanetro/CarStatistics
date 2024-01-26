@@ -1,6 +1,6 @@
-package com.sanetro.app.tutorlanguage.controller;
+package com.sanetro.app.carStatisticsGUI.controller;
 
-import com.sanetro.app.tutorlanguage.db.Users;
+import com.sanetro.app.carStatisticsGUI.db.Users;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class LoginViewController {
-    private Users databaseUsers = new Users();
+    private Users databaseUsers = Users.getInstance();;
     @FXML
     private TextField usernameField;
     @FXML

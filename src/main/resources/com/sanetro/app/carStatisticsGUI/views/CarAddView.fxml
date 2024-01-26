@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.sanetro.app.carStatisticsGUI.controller.CarAddController"
+            prefHeight="900.0" prefWidth="600.0"
+            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+
+    <VBox AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <HBox alignment="TOP_LEFT">
+            <Button text="Back" onAction="#handleReturnBackButtonAction" prefWidth="100"/>
+        </HBox>
+        <VBox alignment="CENTER" spacing="20">
+            <Label text="Add New Car" styleClass="label-h2"/>
+
+            <GridPane alignment="CENTER" hgap="10" vgap="10">
+                <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="idField" maxWidth="400" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Brand:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="brandField" maxWidth="400" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Model:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="modelField" maxWidth="400" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Year:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="yearField" maxWidth="400" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Color:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="colorField" maxWidth="400" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Engine Size:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="engineSizeField" maxWidth="400" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="VIN:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <TextField fx:id="vinField" maxWidth="400" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <Label fx:id="confirmationLabel" text="New car added." textFill="green" visible="false"/>
+            <Button text="Add" fx:id="addButton" onAction="#addCar" maxWidth="400" />
+
+        </VBox>
+    </VBox>
+</AnchorPane>

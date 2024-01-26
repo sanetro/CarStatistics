@@ -8,7 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.sanetro.app.tutorlanguage.controller.MainPanelOpenerController"
+            fx:controller="com.sanetro.app.carStatisticsGUI.controller.MainPanelOpenerController"
             prefHeight="400.0" prefWidth="600.0"
             AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
             AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
@@ -21,13 +21,10 @@
 
         <GridPane alignment="CENTER" hgap="5" vgap="5">
             <Button text="List of cars" onAction="#handleHomeButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-            <Button text="Add car" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Button text="Add car" onAction="#handleCarAddButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
             <Button text="Car statistics" onAction="#handleCarStatisticsButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
-            <Button text="Logout" onAction="#handleCarStatisticsButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+            <Button text="Logout" onAction="#handleLogoutButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
         </GridPane>
-
-        <Label text="Welcome in main Panel!" />
-        <Label text="Something to type here..." wrapText="true"/>
 
     </VBox>
 

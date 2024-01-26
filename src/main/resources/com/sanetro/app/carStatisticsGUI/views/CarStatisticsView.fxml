@@ -11,7 +11,7 @@
 <?import javafx.scene.chart.CategoryAxis?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.sanetro.app.tutorlanguage.controller.MainPanelOpenerController"
+            fx:controller="com.sanetro.app.carStatisticsGUI.controller.CarChartController"
             prefHeight="900.0" prefWidth="600.0"
             AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
             AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
@@ -22,16 +22,16 @@
             <Button text="Back" onAction="#handleReturnBackButtonAction" prefWidth="100"/>
         </HBox>
         <VBox alignment="CENTER">
-            <BarChart fx:id="carChart">
-                <xAxis>
-                    <CategoryAxis label="Car Make"/>
-                </xAxis>
-                <yAxis>
-                    <NumberAxis label="Count"/>
-                </yAxis>
-            </BarChart>
+            <ScrollPane fitToWidth="true" fitToHeight="true" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+                <BarChart fx:id="carChart" prefHeight="1000">
+                    <xAxis>
+                        <NumberAxis label="No. of"/>
+                    </xAxis>
+                    <yAxis>
+                        <CategoryAxis label="Categories"/>
+                    </yAxis>
+                </BarChart>
+            </ScrollPane>
         </VBox>
     </VBox>
-
-
 </AnchorPane>
