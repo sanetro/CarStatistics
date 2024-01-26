@@ -23,4 +23,4 @@ Below are some screenshots depicting different aspects of the application:
 ![Car Statistics](https://raw.githubusercontent.com/sanetro/TutorLanguage/master/src/main/resources/images/forGitScreenshots/carStatistics.png)
 ![Login](https://raw.githubusercontent.com/sanetro/TutorLanguage/master/src/main/resources/images/forGitScreenshots/login.png)
 ![Main Panel](https://raw.githubusercontent.com/sanetro/TutorLanguage/master/src/main/resources/images/forGitScreenshots/mainPanel.png)
-![JavaFX Environment](https://raw.githubusercontent.com/sanetro/TutorLanguage/master/src/main/resources/images/forGitScreenshots/javaFxEnv.png)
+![JavaFX Environment](https://raw.githubusercontent.com/sanetro/TutorLanguage/master/src/main/resources/images/forGitScreenshots/howToCreateProject.png)
